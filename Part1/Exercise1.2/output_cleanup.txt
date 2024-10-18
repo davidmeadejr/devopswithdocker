@@ -1,0 +1,5 @@
+# Command: docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+# Command: docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
