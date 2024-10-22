@@ -1,0 +1,32 @@
+# Command: docker image pull devopsdockeruh/simple-web-service:alpine
+alpine: Pulling from devopsdockeruh/simple-web-service
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Image is up to date for devopsdockeruh/simple-web-service:alpine
+docker.io/devopsdockeruh/simple-web-service:alpine
+
+# Command: docker image pull devopsdockeruh/simple-web-service:ubuntu
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Image is up to date for devopsdockeruh/simple-web-service:ubuntu
+docker.io/devopsdockeruh/simple-web-service:ubuntu
+
+# Command: docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service   ubuntu    d44e1dce3987   3 years ago   126MB
+devopsdockeruh/simple-web-service   alpine    dd4d367476f8   3 years ago   24.3MB
+
+# Command: docker run -d devopsdockeruh/simple-web-service:alpine
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+07396672b0a19ac7b1c3780dfa10fe5e8fd332cdf9237fe209cf328a90b975e7
+
+# Command: docker ps
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED          STATUS          PORTS     NAMES
+07396672b0a1   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   17 seconds ago   Up 17 seconds             upbeat_shockley
+
+# Command: docker exec -it 07 sh
+/usr/src/app # tail -f ./text.log
+2024-10-22 21:24:32 +0000 UTC
+2024-10-22 21:24:34 +0000 UTC
+2024-10-22 21:24:36 +0000 UTC
+2024-10-22 21:24:38 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
